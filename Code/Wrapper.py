@@ -1,15 +1,12 @@
 import cv2
 import json
 import scipy
-import dbow
 import torch
 
 import numpy as np
 
 from glob import glob
 from ultralytics import YOLO
-from scipy.sparse import lil_matrix
-from scipy.optimize import least_squares
 
 
 def Load_Images(Path):
@@ -134,7 +131,7 @@ class visual_slam:
 
 
 def main():
-    Path = "/media/storage/lost+found/projects/og_odometry_python/image_0/"
+    Path = "data/"
     print("Reading Images...")
     Images = Load_Images(Path)
     
